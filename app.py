@@ -13,7 +13,7 @@ def yemot_api():
         # פקודת read: מבקשת מהלקוח להקיש נתונים. 
         # המבנה: read=קובץ_שמע=שם_משתנה_לחזרה,מספר_ספרות...
         # t-אנא... = השמעת טקסט (Text to Speech)
-        return "read=t-אנא הקש את תעודת הזהות שלך וסולם=ID_Input,no,9,9,7,Ok,True,True"
+        return "read=t-אנא הקש את תעודת הזהות שלך וסולם=ID_Input,no,9,9,7,TeudatZehut"
     
     # אם כבר קיבלנו את הקלט מהלקוח
     else:
@@ -24,3 +24,4 @@ def yemot_api():
 if __name__ == '__main__':
     # הפעלת השרת על פורט 5000
     app.run(port=5000)
+
