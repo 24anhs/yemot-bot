@@ -1,7 +1,7 @@
 from flask import Flask, request
 import os
 
-app = Flask(name)
+app = Flask(__name__)
 
 @app.route('/')
 def home():
@@ -13,6 +13,7 @@ phone = request.values.get('ApiPhone', 'unknown')
 response = "id_list_message=t-Shalom, your phone number is " + phone + "&hangup"
 return response
 
-if name == "main":
+if name == "__main__":
 port = int(os.environ.get("PORT", 5000))
+
 app.run(host='0.0.0.0', port=port)
